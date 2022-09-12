@@ -76,6 +76,7 @@ Sebelum melakukan pemrosesan data, kita harus mengetahui keadaan data. seperti m
 
 - Univariate Analysis
 <br>
+
 ![univariate_analysis ](https://user-images.githubusercontent.com/79641595/189610119-328247e6-b80e-41c3-b990-db6846b7ba1b.png)
 
 <br> Kolom target kita adalah kolom 'Adj Close' sehingga kita hanya akan fokus ke sana.
@@ -83,6 +84,7 @@ Sebelum melakukan pemrosesan data, kita harus mengetahui keadaan data. seperti m
 - Multivariate Analysis
 <br> Pada tahap ini kita akan melihat korelasi dari kolom 'Adj Close' dengan kolom-kolom lainnya. Pada plot di bawah kita hanya perlu untuk fokus pada plot baris ke-5. Di sana terlihat jelas bahwa kolom 'Adj Close' memiliki korelasi positif kuat terhadap kolom 'Open', 'High', 'Low', 'Close'. Sementara hubungan dengan kolom 'Volume' adalah korelasi yang lemah
 <br>
+
 ![multivariate_analysis](https://user-images.githubusercontent.com/79641595/189610176-c1c88ee0-f65d-4545-a059-e14dbd8cee16.png)
 
 
