@@ -124,7 +124,7 @@ Model yang akan digunakan proyek kali ini yaitu *Support Vector Regression, Grad
 * Sulit dipakai pada data skala besar
 
 ### K-Nearest Neighbors
-*K-Nearest Neighbors* merupakan algoritma machine learning yang bekerja dengan mengklasifikasikan data baru menggunakan kemiripan antara data baru dengan sejumlah data (k) pada data yang telah ada. Algoritma ini dapat digunakan untuk klasifikasi dan regresi. Untuk hyperparameter yang digunakan pada model ini hanya 1 yaitu :
+*K-Nearest Neighbors* merupakan algoritma machine learning yang bekerja dengan mengklasifikasikan data baru menggunakan kemiripan antara data baru dengan sejumlah data (k) pada data yang telah ada. Algoritma ini dapat digunakan untuk klasifikasi dan regresi. Kali ini untuk nilai k tidak kita deklarasikan sehingga akan tetap pada nilai default. Untuk hyperparameter yang digunakan pada model ini hanya 1 yaitu :
 * *n_neighbors* : Jumlah tetangga untuk yang diperlukan untuk menentukan letak data baru
 
 ##### Kelebihan
@@ -188,6 +188,19 @@ Berdasarkan algoritma terbaik yang telah didapatkan, yaitu algoritma KNN. Algori
 
 <br>
 <image src='https://github.com/Anashaneef/gasoline_predictive_analytics/blob/main/img/forecasting.png' width=200/>
+
+# Conclusion
+---
+
+Berdasarkan seluruh proses dalam proyek mulai dari penyiapan dataset hingga forecasting, akhirnya kita tiba pada kesimpulan dari keseluruhan jalannya proyek ini. Beberapa poin penting yang terdapat dalam proyek ini adalah sebagai berikut:
+* Proses EDA (Exploratory Data Analysis) dilakukan dengan _handling missing value_ berupa pengisian data _null_ dengan bantuan SimpleImputer serta penghapusan data _outliers_ dengan IQR Method.
+* Pengujian korelasi untuk menemukan variabel _dependent_ dan _independent_ dilakukan dengan menggunakan univariate analysis, multivariate analysis, dan visualisasi heatmap menggunakan bantuan library seaborn.
+* Splitting data train dan test menggunakan perbantingan 80:20
+* Normalisasi data menggunakan MinMaxScaler
+* Berdasatkan tiga algoritma yang telah diuji yaitu SVR, Gradient Boosting, dan KNN menghasilkan kesimpulan bahwa algoritma KNN adalah yang paling optimal dengan akurasi sebesar 99.944909% dan MSE sebesar 0.000274.
+* Berdasarkan pemilihan algoritma yang paling optimal, maka proses _time series forecasting_ berhasil dilakukan dengan menggunakan algoritma KNN.
+
+Dari beberapa poin tersebut dapat ditarik sebuah kesimpulan di mana proyek yang telah kita buat berhasil memenuhi _goal_ atau tujuan yang kita rumuskan di awal.
 
 # Referensi :
 ---
