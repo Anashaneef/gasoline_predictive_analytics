@@ -115,9 +115,9 @@ Model yang akan digunakan proyek kali ini yaitu *Support Vector Regression, Grad
 
 ### Support Vector Regression
 *Support Vector Regression* memiliki prinsip yang sama dengan SVM, namun SVM biasa digunakan dalam klasifikasi. Pada SVM, algoritma tersebut berusaha mencari jalan terbesar yang bisa memisahkan sampel dari kelas berbeda, sedangkan SVR mencari jalan yang dapat menampung sebanyak mungkin sampel di jalan. Untuk hyper parameter yang digunakan pada model ini adalah sebagai berikut :
-* *kernel* : Hyperparameter ini digunakan untuk menghitung kernel matriks sebelumnya.
-* *C* : Hyperparameter ini adalah parameter regularisasi digunakan untuk menukar klasifikasi yang benar dari contoh *training* terhadap maksimalisasi margin fungsi keputusan.
-* *gamma* : Hyperparameter ini digunakan untk menetukan seberapa jauh pengaruh satu contoh pelatihan mencapai, dengan nilai rendah berarti jauh dan nilai tinggi berarti dekat.
+* *kernel* : Hyperparameter ini digunakan untuk menghitung kernel matriks sebelumnya. Pada dataset yang kita gunakan, kernel yang dipilih adalah 'rbf'. Kernel RBF atau juga disebut kernel Gaussian adalah konsep kernel yang paling banyak digunakan untuk memecahkan masalah klasifikasi data yang tidak dapat dipisahkan secara linear. Kernel ini dikenal memiliki performa yang baik dengan parameter tertentu, dan hasil dari pelatihan memiliki nilai error yang kecil dibandingkan dengan kernel lainnya.
+* *C* : Hyperparameter ini adalah parameter regularisasi digunakan untuk menukar klasifikasi yang benar dari contoh *training* terhadap maksimalisasi margin fungsi keputusan. Dalam fitting model yang kita gunakan, hyperparameter C diberikan nilai 1000.
+* *gamma* : Hyperparameter ini digunakan untk menetukan seberapa jauh pengaruh satu contoh pelatihan mencapai, dengan nilai rendah berarti jauh dan nilai tinggi berarti dekat. Dalam fitting model yang kita gunakan, hyperparameter gamma diberikan nilai 0.003.
 
 ##### Kelebihan
 * Lebih efektif pada data dimensi tinggi (data dengan jumlah fitur yang banyak)
@@ -128,7 +128,7 @@ Model yang akan digunakan proyek kali ini yaitu *Support Vector Regression, Grad
 
 ### K-Nearest Neighbors
 *K-Nearest Neighbors* merupakan algoritma machine learning yang bekerja dengan mengklasifikasikan data baru menggunakan kemiripan antara data baru dengan sejumlah data (k) pada data yang telah ada. Algoritma ini dapat digunakan untuk klasifikasi dan regresi. Kali ini untuk nilai k tidak kita deklarasikan sehingga akan tetap pada nilai default. Untuk hyperparameter yang digunakan pada model ini hanya 1 yaitu :
-* *n_neighbors* : Jumlah tetangga untuk yang diperlukan untuk menentukan letak data baru
+* *n_neighbors* : Jumlah tetangga untuk yang diperlukan untuk menentukan letak data baru. Dalam fitting model yang kita gunakan, hyperparameter n_neigbors diberikan nilai 6 karena kita hanya ingin 6 titik yang digunakan untuk menentukan letak baru.
 
 ##### Kelebihan
 * Dapat menerima data yang masih *noisy*
@@ -141,9 +141,9 @@ Model yang akan digunakan proyek kali ini yaitu *Support Vector Regression, Grad
 
 ### Gradient Boosting
 Gradient Boosting adalah algoritma machine learning yang menggunakan teknik *ensembel learning* dari *decision tree* untuk memprediksi nilai. Gradient Boosting sangat mampu menangani pattern yang kompleks dan data ketika linear model tidak dapat menangani. Untuk hyperparameter yang digunakan pada model ini ada 3 yaitu :
-* *learning_rate* : Hyperparameter training yang digunakan untuk menghitung nilai koreksi bobot padad waktu proses training. Umumnya nilai learning rate berkisar antara 0 hingga 1
-* *n_estimators* : Jumlah tahapan boosting yang akan dilakukan.
-* *criterion* : Hyperparameter yang digunakan untuk menemukan fitur dan ambang batas optimal dalam membagi data
+* *learning_rate* : Hyperparameter training yang digunakan untuk menghitung nilai koreksi bobot padad waktu proses training. Umumnya nilai learning rate berkisar antara 0 hingga 1. Dalam fitting model yang kita gunakan, hyperparameter ini diberikan nilai 0.01.
+* *n_estimators* : Jumlah tahapan boosting yang akan dilakukan. Dalam proses fitting model, kita menggunakan 1000 tahapan sehingga nilai dari n_estimators adalah 1000
+* *criterion* : Hyperparameter yang digunakan untuk menemukan fitur dan ambang batas optimal dalam membagi data. Ada beberapa criterion yang dapat diaplikasikan, diantaranya adalah "friedman_mse" untuk kesalahan kuadrat rata-rata dengan skor perbaikan oleh Friedman, "squared_error" untuk kesalahan kuadrat rata-rata. Dalam proses fitting model, kita menggunakan criterion "squared_error".
 
 ##### Kelebihan
 * Hasil pemodelan yang lebih akurat
@@ -172,8 +172,11 @@ Yi_hat = nilai prediksi
 
 Berikut adalah nilai MSE dari masing-masing model:
 <br>
+
 ![mse](https://user-images.githubusercontent.com/79641595/189610928-04038024-04ba-4d91-a6d1-3933b6b49644.png)
+
 <br>
+
 ![mse_plot](https://user-images.githubusercontent.com/79641595/189610978-64ce4457-4c81-473d-995a-cfe30387ccad.png)
 
 <br>Untuk lebih jelasnya, kita akan menampilkan hasil akurasi dari beberapa model yang dipakai :
@@ -188,8 +191,8 @@ Untuk proyek kali ini terdapat 2 model yang dapat berjalan dengan performa optim
 
 Berdasarkan algoritma terbaik yang telah didapatkan, yaitu algoritma KNN. Algoritma KNN sendiri memiliki akurasi sebesar 99.944909% dan MSE sebesar 0.000274. Selanjutnya kita akan melakukan peramalan atau prediksi harga bensin selama satu minggu ke depan.
 <br>
-![forecasting](https://user-images.githubusercontent.com/79641595/189611054-13ac0f30-a1c3-42df-8d37-cbbe9b0c267c.png)
 
+![forecasting](https://user-images.githubusercontent.com/79641595/189611054-13ac0f30-a1c3-42df-8d37-cbbe9b0c267c.png)
 
 # Conclusion
 ---
