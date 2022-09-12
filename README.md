@@ -75,12 +75,14 @@ Sebelum melakukan pemrosesan data, kita harus mengetahui keadaan data. seperti m
 <br> Ketika kita menggunakan visualisasi data berkategori numerik seperti di atas, maka kita akan mendapati kolom 'Volume' memiliki data yang termasuk dalam outlier. Oleh karena itu, kita akan menghilangkan outlier ini dengan IQR Method. Metode ini bekerja dengan cara menghapus data-data yang berada di luar IQR (dalam rentang 25% hingga 75% data). Setelah melakukan penghapusan tehadap data outlier, maka didapatkan sebuah data baru dengan total 7 kolom di mana masing-masing kolom memiliki 5195 record.
 
 - Univariate Analysis
+<br>
 ![univariate_analysis ](https://user-images.githubusercontent.com/79641595/189610119-328247e6-b80e-41c3-b990-db6846b7ba1b.png)
 
 <br> Kolom target kita adalah kolom 'Adj Close' sehingga kita hanya akan fokus ke sana.
 
 - Multivariate Analysis
 <br> Pada tahap ini kita akan melihat korelasi dari kolom 'Adj Close' dengan kolom-kolom lainnya. Pada plot di bawah kita hanya perlu untuk fokus pada plot baris ke-5. Di sana terlihat jelas bahwa kolom 'Adj Close' memiliki korelasi positif kuat terhadap kolom 'Open', 'High', 'Low', 'Close'. Sementara hubungan dengan kolom 'Volume' adalah korelasi yang lemah
+<br>
 ![multivariate_analysis](https://user-images.githubusercontent.com/79641595/189610176-c1c88ee0-f65d-4545-a059-e14dbd8cee16.png)
 
 
@@ -167,11 +169,12 @@ Yi = nilai sesungguhnya
 Yi_hat = nilai prediksi
 
 Berikut adalah nilai MSE dari masing-masing model:
+<br>
 ![mse](https://user-images.githubusercontent.com/79641595/189610928-04038024-04ba-4d91-a6d1-3933b6b49644.png)
-
+<br>
 ![mse_plot](https://user-images.githubusercontent.com/79641595/189610978-64ce4457-4c81-473d-995a-cfe30387ccad.png)
 
-Untuk lebih jelasnya, kita akan menampilkan hasil akurasi dari beberapa model yang dipakai :
+<br>Untuk lebih jelasnya, kita akan menampilkan hasil akurasi dari beberapa model yang dipakai :
 
 ![model_accuracy](https://user-images.githubusercontent.com/79641595/189601673-e01997bb-c274-4f60-94fc-4a21e504a99c.png)
 
@@ -182,7 +185,7 @@ Untuk proyek kali ini terdapat 2 model yang dapat berjalan dengan performa optim
 ---
 
 Berdasarkan algoritma terbaik yang telah didapatkan, yaitu algoritma KNN. Algoritma KNN sendiri memiliki akurasi sebesar 99.944909% dan MSE sebesar 0.000274. Selanjutnya kita akan melakukan peramalan atau prediksi harga bensin selama satu minggu ke depan.
-
+<br>
 ![forecasting](https://user-images.githubusercontent.com/79641595/189611054-13ac0f30-a1c3-42df-8d37-cbbe9b0c267c.png)
 
 
