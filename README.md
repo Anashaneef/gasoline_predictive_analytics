@@ -160,7 +160,8 @@ Untuk proyek kali ini kita akan menggunakan model *K-Nearest Neighbors* karena m
 
 Untuk evaluasi pada machine learning model ini, metrik yang digunakan adalah *mean squared error (mse)*. Dimana metrik ini mengukur seberapa dekat garis pas dengan titik data. Model terbaik adalah model dengan nilai MSE paling sedikit
 
-![](https://www.pythonpool.com/wp-content/uploads/2021/08/20210812_200937_0000-1024x270.png)
+<br>
+<image src='https://www.pythonpool.com/wp-content/uploads/2021/08/20210812_200937_0000-1024x270.png' width= 500/>
 
 dimana :
 n = jumlah titik data
@@ -169,7 +170,7 @@ Yi_hat = nilai prediksi
 
 Berikut adalah nilai MSE dari masing-masing model:
 <br>
-<image src='https://github.com/Anashaneef/gasoline_predictive_analytics/blob/main/img/mse.png' width=200/>
+<image src='https://github.com/Anashaneef/gasoline_predictive_analytics/blob/main/img/mse.png' width=400/>
 <br>
 <image src='https://github.com/Anashaneef/gasoline_predictive_analytics/blob/main/img/mse_plot.png' width=400/>
 
@@ -186,7 +187,7 @@ Untuk proyek kali ini terdapat 2 model yang dapat berjalan dengan performa optim
 Berdasarkan algoritma terbaik yang telah didapatkan, yaitu algoritma KNN, selanjutnya kita akan melakukan peramalan atau prediksi harga bensin selama satu minggu ke depan.
 
 <br>
-<image src='https://github.com/Anashaneef/gasoline_predictive_analytics/blob/main/img/forecasting.png' width=400/>
+<image src='https://github.com/Anashaneef/gasoline_predictive_analytics/blob/main/img/forecasting.png' width=200/>
 
 # Referensi :
 ---
