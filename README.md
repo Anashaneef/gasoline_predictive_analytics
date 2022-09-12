@@ -169,7 +169,7 @@ Yi_hat = nilai prediksi
 
 Berikut adalah nilai MSE dari masing-masing model:
 <br>
-<image src='https://github.com/Anashaneef/gasoline_predictive_analytics/blob/main/img/mse.png' width=400/>
+<image src='https://github.com/Anashaneef/gasoline_predictive_analytics/blob/main/img/mse.png' width=200/>
 <br>
 <image src='https://github.com/Anashaneef/gasoline_predictive_analytics/blob/main/img/mse_plot.png' width=400/>
 
