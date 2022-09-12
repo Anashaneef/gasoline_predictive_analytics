@@ -195,7 +195,7 @@ Berdasarkan algoritma terbaik yang telah didapatkan, yaitu algoritma KNN. Algori
 Berdasarkan seluruh proses dalam proyek mulai dari penyiapan dataset hingga forecasting, akhirnya kita tiba pada kesimpulan dari keseluruhan jalannya proyek ini. Beberapa poin penting yang terdapat dalam proyek ini adalah sebagai berikut:
 * Proses EDA (Exploratory Data Analysis) dilakukan dengan _handling missing value_ berupa pengisian data _null_ dengan bantuan SimpleImputer serta penghapusan data _outliers_ dengan IQR Method.
 * Pengujian korelasi untuk menemukan variabel _dependent_ dan _independent_ dilakukan dengan menggunakan univariate analysis, multivariate analysis, dan visualisasi heatmap menggunakan bantuan library seaborn.
-* Splitting data train dan test menggunakan perbantingan 80:20
+* Splitting data train dan test menggunakan perbandingan 80:20
 * Normalisasi data menggunakan MinMaxScaler
 * Berdasatkan tiga algoritma yang telah diuji yaitu SVR, Gradient Boosting, dan KNN menghasilkan kesimpulan bahwa algoritma KNN adalah yang paling optimal dengan akurasi sebesar 99.944909% dan MSE sebesar 0.000274.
 * Berdasarkan pemilihan algoritma yang paling optimal, maka proses _time series forecasting_ berhasil dilakukan dengan menggunakan algoritma KNN.
