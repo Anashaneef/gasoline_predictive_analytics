@@ -55,7 +55,7 @@ Dataset yang digunakan dalam proyek ini merupakan dataset dari riwayat harga ben
 |-------------------------|---------------------------------------------------------------------------------------------|
 | Sumber                  | Dataset: [Kaggle](https://www.kaggle.com/datasets/mattiuzc/commodity-futures-price-history) |
 | Dataset Owner           | mattiuzc                                                                                    |
-| Usability               | 0,35                                                                                        |
+| Usability               | 8.24                                                                                        |
 | Jenis dan Ukuran Berkas | CSV (322.61 kB)                                                                             |
 
 Dataset yang digunakan memiliki total 5246 _record_ dalam setiap kolom. Dataset ini sendiri memiliki dengan 7 kolom (*Date, Open, High, Low, Close, Adj Close, Volume*) yang memiliki 105 *missing value* pada masing-masing kolom *Open, High, Low, Close, Adj Close, Volume* dengan informasi sebagai berikut :
