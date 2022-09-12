@@ -51,12 +51,12 @@ Solusi yang dapat dilakukan agar goals terpenuhi adalah sebagai berikut :
 ---
 
 Dataset yang digunakan dalam proyek ini merupakan dataset dari riwayat harga bensin dengan detail yang lengkap. Informasi mengenai dataset ini adalah sebagai berikut:
-  | Jenis                   | Keterangan                                                                              |
-  | ----------------------- | --------------------------------------------------------------------------------------- |
-  | Sumber                  | Dataset: [Kaggle](https://www.kaggle.com/datasets/mattiuzc/commodity-futures-price-history) |
-  | Dataset Owner           | mattiuzc                                                                                  |
-  | Usability               | 8.24                                                                                      |
-  | Jenis dan Ukuran Berkas | CSV (322.61 kB)                                                                           |
+| Jenis                   | Keterangan                                                                                  |
+|-------------------------|---------------------------------------------------------------------------------------------|
+| Sumber                  | Dataset: [Kaggle](https://www.kaggle.com/datasets/mattiuzc/commodity-futures-price-history) |
+| Dataset Owner           | mattiuzc                                                                                    |
+| Usability               | 0,35                                                                                        |
+| Jenis dan Ukuran Berkas | CSV (322.61 kB)                                                                             |
 
 Dataset yang digunakan memiliki total 5246 _record_ dalam setiap kolom. Dataset ini sendiri memiliki dengan 7 kolom (*Date, Open, High, Low, Close, Adj Close, Volume*) yang memiliki 105 *missing value* pada masing-masing kolom *Open, High, Low, Close, Adj Close, Volume* dengan informasi sebagai berikut :
   * Date : Tanggal pencatatan Data
@@ -72,23 +72,23 @@ Sebelum melakukan pemrosesan data, kita harus mengetahui keadaan data. seperti m
 
 - Menangani outlier
 <br>
-<image src='https://github.com/Anashaneef/gasoline_predictive_analytics/blob/main/img/outliers_visualization.png' width= 500/>
+![outliers_visualization](https://user-images.githubusercontent.com/79641595/189594557-333d1bb7-c700-4f3c-8c94-b6b077ef0bca.png)
 <br> Ketika kita menggunakan visualisasi data berkategori numerik seperti di atas, maka kita akan mendapati kolom 'Volume' memiliki data yang termasuk dalam outlier. Oleh karena itu, kita akan menghilangkan outlier ini dengan IQR Method. Metode ini bekerja dengan cara menghapus data-data yang berada di luar IQR (dalam rentang 25% hingga 75% data). Setelah melakukan penghapusan tehadap data outlier, maka didapatkan sebuah data baru dengan total 7 kolom di mana masing-masing kolom memiliki 5195 record.
 
 - Univariate Analysis
 <br>
-<image src='https://github.com/Anashaneef/gasoline_predictive_analytics/blob/main/img/univariate_analysis.png' width= 500/>
+![univariate_analysis](https://user-images.githubusercontent.com/79641595/189594679-91fa80c7-0bf1-4c01-89a7-54317fd7b0e5.png)
 <br> Kolom target kita adalah kolom 'Adj Close' sehingga kita hanya akan fokus ke sana.
 
 - Multivariate Analysis
 <br> Pada tahap ini kita akan melihat korelasi dari kolom 'Adj Close' dengan kolom-kolom lainnya. Pada plot di bawah kita hanya perlu untuk fokus pada plot baris ke-5. Di sana terlihat jelas bahwa kolom 'Adj Close' memiliki korelasi positif kuat terhadap kolom 'Open', 'High', 'Low', 'Close'. Sementara hubungan dengan kolom 'Volume' adalah korelasi yang lemah
 <br>
-<image src='https://github.com/Anashaneef/gasoline_predictive_analytics/blob/main/img/multivariate_analysis.png' width= 500/>
+![multivariate_analysis](https://user-images.githubusercontent.com/79641595/189594761-44512896-100c-42ab-bf7a-f342c5062f10.png)
 
 
 <br> Untuk melihat nilai korelasi dengan lebih jelas, kita bisa memanfaatkan Heatmap dari library Seaborn. Dapat kita lihat bahwa 'Adj Close' memiliki korelasi positif tinggi pada setiap fitur yang ditandai dengan warna merah dan angka 1, kecuali fitur 'Volume' sehingga kita dapat menggunakan semua fitur sebagai dependant variable.
 <br>
-<image src='https://github.com/Anashaneef/gasoline_predictive_analytics/blob/main/img/heatmap.png' width= 500/>
+![heatmap](https://user-images.githubusercontent.com/79641595/189594850-16c03ad2-0e27-42a3-8aaa-6a481553534f.png)
     
 # Data Preparation
 ---
@@ -170,24 +170,25 @@ Yi_hat = nilai prediksi
 
 Berikut adalah nilai MSE dari masing-masing model:
 <br>
-<image src='https://github.com/Anashaneef/gasoline_predictive_analytics/blob/main/img/mse.png' width=400/>
+![mse](https://user-images.githubusercontent.com/79641595/189595080-5df52c3e-4a8e-4854-801d-1b8f03fb078e.png)
 <br>
-<image src='https://github.com/Anashaneef/gasoline_predictive_analytics/blob/main/img/mse_plot.png' width=400/>
+![mse_plot](https://user-images.githubusercontent.com/79641595/189595127-5b572081-b68d-4d73-a1ee-4ba96adcf978.png)
+
 
 Untuk lebih jelasnya, kita akan menampilkan hasil akurasi dari beberapa model yang dipakai :
 
 <br>
-<image src='https://github.com/Anashaneef/gasoline_predictive_analytics/blob/main/img/model_accuracy.png' width=400/>
+![model_accuracy](https://user-images.githubusercontent.com/79641595/189595191-85c83f4c-973f-47b6-8a25-3022d4657f49.png)
 <br>
 Untuk proyek kali ini terdapat 2 model yang dapat berjalan dengan performa optimal yaitu, Gradient Boosting model dan K-Nearest Neighbors. Terdapat selisih nilai yang sangat kecil. Tetapi pada perhitungan akurasi model terlihat model yang menggunakan K-Nearest Neighbors memiliki nilai lebih 0.02% daripada Gradient Boosting.
 
 # Forecasting
 ---
 
-Berdasarkan algoritma terbaik yang telah didapatkan, yaitu algoritma KNN, selanjutnya kita akan melakukan peramalan atau prediksi harga bensin selama satu minggu ke depan.
+Berdasarkan algoritma terbaik yang telah didapatkan, yaitu algoritma KNN. Algoritma KNN sendiri memiliki akurasi sebesar 99.944909% dan MSE sebesar 0.000274. Selanjutnya kita akan melakukan peramalan atau prediksi harga bensin selama satu minggu ke depan.
 
 <br>
-<image src='https://github.com/Anashaneef/gasoline_predictive_analytics/blob/main/img/forecasting.png' width=200/>
+![forecasting](https://user-images.githubusercontent.com/79641595/189595254-6b6f3180-e804-4105-a70d-a1aeeb6618ff.png)
 
 # Referensi :
 ---
