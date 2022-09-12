@@ -77,18 +77,18 @@ Sebelum melakukan pemrosesan data, kita harus mengetahui keadaan data. seperti m
 
 - Univariate Analysis
 <br>
-![univariate_analysis](https://user-images.githubusercontent.com/79641595/189594679-91fa80c7-0bf1-4c01-89a7-54317fd7b0e5.png)
+<image src='https://github.com/Anashaneef/gasoline_predictive_analytics/blob/main/img/univariate_analysis.png' width= 500/>
 <br> Kolom target kita adalah kolom 'Adj Close' sehingga kita hanya akan fokus ke sana.
 
 - Multivariate Analysis
 <br> Pada tahap ini kita akan melihat korelasi dari kolom 'Adj Close' dengan kolom-kolom lainnya. Pada plot di bawah kita hanya perlu untuk fokus pada plot baris ke-5. Di sana terlihat jelas bahwa kolom 'Adj Close' memiliki korelasi positif kuat terhadap kolom 'Open', 'High', 'Low', 'Close'. Sementara hubungan dengan kolom 'Volume' adalah korelasi yang lemah
 <br>
-![multivariate_analysis](https://user-images.githubusercontent.com/79641595/189594761-44512896-100c-42ab-bf7a-f342c5062f10.png)
+<image src='https://github.com/Anashaneef/gasoline_predictive_analytics/blob/main/img/multivariate_analysis.png' width= 500/>
 
 
 <br> Untuk melihat nilai korelasi dengan lebih jelas, kita bisa memanfaatkan Heatmap dari library Seaborn. Dapat kita lihat bahwa 'Adj Close' memiliki korelasi positif tinggi pada setiap fitur yang ditandai dengan warna merah dan angka 1, kecuali fitur 'Volume' sehingga kita dapat menggunakan semua fitur sebagai dependant variable.
 <br>
-![heatmap](https://user-images.githubusercontent.com/79641595/189594850-16c03ad2-0e27-42a3-8aaa-6a481553534f.png)
+<image src='https://github.com/Anashaneef/gasoline_predictive_analytics/blob/main/img/heatmap.png' width= 500/>
     
 # Data Preparation
 ---
@@ -170,15 +170,15 @@ Yi_hat = nilai prediksi
 
 Berikut adalah nilai MSE dari masing-masing model:
 <br>
-![mse](https://user-images.githubusercontent.com/79641595/189595080-5df52c3e-4a8e-4854-801d-1b8f03fb078e.png)
+<image src='https://github.com/Anashaneef/gasoline_predictive_analytics/blob/main/img/mse.png' width=400/>
 <br>
-![mse_plot](https://user-images.githubusercontent.com/79641595/189595127-5b572081-b68d-4d73-a1ee-4ba96adcf978.png)
+<image src='https://github.com/Anashaneef/gasoline_predictive_analytics/blob/main/img/mse_plot.png' width=400/>
 
 
 Untuk lebih jelasnya, kita akan menampilkan hasil akurasi dari beberapa model yang dipakai :
 
 <br>
-![model_accuracy](https://user-images.githubusercontent.com/79641595/189595191-85c83f4c-973f-47b6-8a25-3022d4657f49.png)
+![model_accuracy](https://user-images.githubusercontent.com/79641595/189600583-e54508f4-9027-4361-a834-ec321b67f125.png)
 <br>
 Untuk proyek kali ini terdapat 2 model yang dapat berjalan dengan performa optimal yaitu, Gradient Boosting model dan K-Nearest Neighbors. Terdapat selisih nilai yang sangat kecil. Tetapi pada perhitungan akurasi model terlihat model yang menggunakan K-Nearest Neighbors memiliki nilai lebih 0.02% daripada Gradient Boosting.
 
@@ -188,7 +188,7 @@ Untuk proyek kali ini terdapat 2 model yang dapat berjalan dengan performa optim
 Berdasarkan algoritma terbaik yang telah didapatkan, yaitu algoritma KNN. Algoritma KNN sendiri memiliki akurasi sebesar 99.944909% dan MSE sebesar 0.000274. Selanjutnya kita akan melakukan peramalan atau prediksi harga bensin selama satu minggu ke depan.
 
 <br>
-![forecasting](https://user-images.githubusercontent.com/79641595/189595254-6b6f3180-e804-4105-a70d-a1aeeb6618ff.png)
+<image src='https://github.com/Anashaneef/gasoline_predictive_analytics/blob/main/img/forecasting.png' width=200/>
 
 # Referensi :
 ---
