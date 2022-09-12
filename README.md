@@ -71,8 +71,7 @@ Dataset yang digunakan memiliki total 5246 _record_ dalam setiap kolom. Dataset 
 Sebelum melakukan pemrosesan data, kita harus mengetahui keadaan data. seperti mencari korelasi antar fitur, mencari outlier, melakukan analisis *univariate* dan *multivariate*.
 
 - Menangani outlier
-<br>
-![outliers_visualization (1)](https://user-images.githubusercontent.com/79641595/189601041-9ca3cb3e-5532-448a-ad71-74cea3e21bfa.png)
+![outliers_visualization](https://user-images.githubusercontent.com/79641595/189601601-16e55dba-2222-437c-9dd8-47ce431e1718.png)
 <br> Ketika kita menggunakan visualisasi data berkategori numerik seperti di atas, maka kita akan mendapati kolom 'Volume' memiliki data yang termasuk dalam outlier. Oleh karena itu, kita akan menghilangkan outlier ini dengan IQR Method. Metode ini bekerja dengan cara menghapus data-data yang berada di luar IQR (dalam rentang 25% hingga 75% data). Setelah melakukan penghapusan tehadap data outlier, maka didapatkan sebuah data baru dengan total 7 kolom di mana masing-masing kolom memiliki 5195 record.
 
 - Univariate Analysis
@@ -177,8 +176,8 @@ Berikut adalah nilai MSE dari masing-masing model:
 
 Untuk lebih jelasnya, kita akan menampilkan hasil akurasi dari beberapa model yang dipakai :
 
-<br>
-![model_accuracy (1)](https://user-images.githubusercontent.com/79641595/189601209-deae1f5b-4b96-471c-8662-68df251d1474.png)
+![model_accuracy](https://user-images.githubusercontent.com/79641595/189601673-e01997bb-c274-4f60-94fc-4a21e504a99c.png)
+
 <br>
 Untuk proyek kali ini terdapat 2 model yang dapat berjalan dengan performa optimal yaitu, Gradient Boosting model dan K-Nearest Neighbors. Terdapat selisih nilai yang sangat kecil. Tetapi pada perhitungan akurasi model terlihat model yang menggunakan K-Nearest Neighbors memiliki nilai lebih 0.02% daripada Gradient Boosting.
 
